@@ -9,3 +9,17 @@ describe('Frontend loads', () => {
     }) //Dette tester at den kan besøge sitet.
   })
 })
+
+
+describe('Fronntend loads', () => {
+  it('visits the app', () => {
+    cy.visit('http://localhost:5173')
+  })
+})
+
+describe('Check h1 tag on app has "You did it!"', () => {
+  it('visits the app', () => {
+    cy.visit('http://localhost:5173')
+    cy.get('h1').should('have.text', 'You did it!')
+  })
+})
